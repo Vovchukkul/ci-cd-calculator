@@ -4,6 +4,10 @@ pipeline {
     tools {
         nodejs "node18"
     }
+    
+    triggers {
+        githubPush()
+    }
 
     stages {
         stage('Checkout') {
